@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 
 export function Logo({ className }: { className?: string }) {
     return (
-      <div className={cn("relative", className)}>
+      <div className={cn("relative w-40", className)}>
         <Image 
           src="/logo.jpg"
           alt="ASK Brands & Signs Logo"

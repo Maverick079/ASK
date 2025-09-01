@@ -31,7 +31,7 @@ export function Header() {
       )}
     >
       <div className="container mx-auto flex h-full items-center justify-between px-4">
-        <a href="/" className="relative h-full w-40">
+        <a href="/" className="relative h-full flex items-center">
           <Logo 
             className={cn(
               "absolute -bottom-8 transition-all duration-300",
