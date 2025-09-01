@@ -1,10 +1,18 @@
+
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { LightGallery } from "./light-gallery";
+
+import LightGallery from 'lightgallery/react';
+import type { LightGallery as LightGalleryType } from 'lightgallery/lightgallery';
+import lgThumbnail from 'lightgallery/plugins/thumbnail';
+import lgZoom from 'lightgallery/plugins/zoom';
+import 'lightgallery/css/lightgallery.css';
+import 'lightgallery/css/lg-zoom.css';
+import 'lightgallery/css/lg-thumbnail.css';
+import React from "react";
 
 const projects = [
   {
@@ -63,9 +71,61 @@ const projects = [
   },
 ];
 
-export function ProjectGallery() {
-  const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
 
+function ProjectCard({ project }: { project: typeof projects[0] }) {
+    const lightGalleryRef = React.useRef<LightGalleryType | null>(null);
+  
+    return (
+        <div className="text-left w-full">
+            <Card 
+              className="overflow-hidden group transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-4 h-full" 
+              style={{ transformStyle: 'preserve-3d' }}
+              onClick={() => {
+                if (lightGalleryRef.current) {
+                    lightGalleryRef.current.openGallery();
+                }
+              }}
+            >
+              <div className="transition-transform duration-500 ease-out group-hover:[transform:rotateX(15deg)_rotateY(-15deg)_translateZ(20px)] h-full flex flex-col">
+                <CardContent className="p-0 flex-grow flex flex-col cursor-pointer">
+                  <div className="relative">
+                    <Image
+                      src={project.images[0].src}
+                      alt={project.title}
+                      width={600}
+                      height={400}
+                      data-ai-hint={project.images[0].hint}
+                      className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300"></div>
+                  </div>
+                  <div className="p-4 bg-card mt-auto">
+                    <Badge variant="secondary" className="mb-2 font-body">{project.category}</Badge>
+                    <h3 className="font-semibold font-headline">{project.title}</h3>
+                  </div>
+                </CardContent>
+              </div>
+            </Card>
+            <LightGallery
+                onInit={(ref) => {
+                    if (ref) {
+                        lightGalleryRef.current = ref.instance
+                    }
+                }}
+                speed={500}
+                plugins={[lgThumbnail, lgZoom]}
+                dynamic
+                dynamicEl={project.images.map(image => ({
+                    src: image.src,
+                    thumb: image.src,
+                    subHtml: `<h4 class="text-white font-bold text-lg">${project.title}</h4>`
+                }))}
+            />
+        </div>
+    )
+}
+
+export function ProjectGallery() {
   return (
     <>
       <section id="gallery" className="py-16 md:py-24 bg-secondary/50">
@@ -79,38 +139,11 @@ export function ProjectGallery() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8" style={{ perspective: '1000px' }}>
             {projects.map((project) => (
-              <button key={project.title} onClick={() => setSelectedProject(project)} className="text-left w-full">
-                <Card className="overflow-hidden group transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-4 h-full" style={{ transformStyle: 'preserve-3d' }}>
-                  <div className="transition-transform duration-500 ease-out group-hover:[transform:rotateX(15deg)_rotateY(-15deg)_translateZ(20px)] h-full flex flex-col">
-                    <CardContent className="p-0 flex-grow flex flex-col">
-                      <div className="relative">
-                        <Image
-                          src={project.images[0].src}
-                          alt={project.title}
-                          width={600}
-                          height={400}
-                          data-ai-hint={project.images[0].hint}
-                          className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-                        />
-                        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300"></div>
-                      </div>
-                      <div className="p-4 bg-card mt-auto">
-                        <Badge variant="secondary" className="mb-2 font-body">{project.category}</Badge>
-                        <h3 className="font-semibold font-headline">{project.title}</h3>
-                      </div>
-                    </CardContent>
-                  </div>
-                </Card>
-              </button>
+                <ProjectCard key={project.title} project={project} />
             ))}
           </div>
         </div>
       </section>
-
-      <LightGallery
-        project={selectedProject}
-        onClose={() => setSelectedProject(null)}
-      />
     </>
   );
 }
