@@ -11,9 +11,9 @@ const navLinks = [
 export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto flex h-16 items-center justify-between px-4">
+      <div className="container mx-auto flex h-20 items-center justify-between px-4">
         <a href="/" className="flex items-center gap-2">
-          <Logo className="h-10" />
+          <Logo className="h-16" />
         </a>
 
         {/* Desktop Navigation */}
@@ -44,7 +44,7 @@ export function Header() {
             <SheetContent side="right">
               <div className="grid gap-4 py-6">
                 <a href="/" className="flex items-center gap-2 mb-4">
-                  <Logo className="h-10" />
+                  <Logo className="h-16" />
                 </a>
                 {navLinks.map((link) => (
                   <a

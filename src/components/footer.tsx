@@ -7,7 +7,7 @@ export function Footer() {
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center gap-2 mb-4 md:mb-0">
-            <Logo className="h-10" />
+            <Logo className="h-16" />
           </div>
           <div className="flex gap-4">
             <a href="#" aria-label="Twitter" className="text-muted-foreground hover:text-primary">
