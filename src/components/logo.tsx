@@ -4,7 +4,7 @@ export function Logo({ className }: { className?: string }) {
     return (
       <div className={className}>
         <Image 
-          src="https://placehold.co/200x160/ffffff/ffffff.png"
+          src="/logo.png"
           alt="ASK Brands & Signs Logo"
           width={200}
           height={160}
