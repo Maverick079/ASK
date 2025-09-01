@@ -4,6 +4,8 @@
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 
 import LightGallery from 'lightgallery/react';
 import type { LightGallery as LightGalleryType } from 'lightgallery/lightgallery';
@@ -74,17 +76,20 @@ const projects = [
 
 function ProjectCard({ project }: { project: typeof projects[0] }) {
     const lightGalleryRef = React.useRef<LightGalleryType | null>(null);
+
+    const openGallery = (e?: React.MouseEvent) => {
+        if(e) e.stopPropagation();
+        if (lightGalleryRef.current) {
+            lightGalleryRef.current.openGallery();
+        }
+    }
   
     return (
         <div className="text-left w-full">
             <Card 
               className="overflow-hidden group transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-4 h-full" 
               style={{ transformStyle: 'preserve-3d' }}
-              onClick={() => {
-                if (lightGalleryRef.current) {
-                    lightGalleryRef.current.openGallery();
-                }
-              }}
+              onClick={() => openGallery()}
             >
               <div className="transition-transform duration-500 ease-out group-hover:[transform:rotateX(15deg)_rotateY(-15deg)_translateZ(20px)] h-full flex flex-col">
                 <CardContent className="p-0 flex-grow flex flex-col cursor-pointer">
@@ -102,6 +107,10 @@ function ProjectCard({ project }: { project: typeof projects[0] }) {
                   <div className="p-4 bg-card mt-auto">
                     <Badge variant="secondary" className="mb-2 font-body">{project.category}</Badge>
                     <h3 className="font-semibold font-headline">{project.title}</h3>
+                    <Button variant="link" className="p-0 h-auto font-body mt-2" onClick={(e) => openGallery(e)}>
+                        View More
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
                   </div>
                 </CardContent>
               </div>

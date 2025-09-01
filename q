@@ -1,0 +1,119 @@
+[33mcommit 2f9cf0e32a208f85b7e0728b06bf39cae7a92451[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: Dhruwal Makwana <dhruwalmakwana@gmail.com>
+Date:   Mon Sep 1 20:13:19 2025 +0000
+
+    make the brands logo infinite  automatic scrolling
+
+[33mcommit 7690aa80d96d0ba0d1d3a26cad41f6529eac2bb5[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: Dhruwal Makwana <dhruwalmakwana@gmail.com>
+Date:   Mon Sep 1 19:56:27 2025 +0000
+
+    make default as white
+
+[33mcommit b76e8fd92a7cca7d652e6c24164a05190f88ec71[m
+Author: Dhruwal Makwana <dhruwalmakwana@gmail.com>
+Date:   Mon Sep 1 19:55:17 2025 +0000
+
+    Make the toggle button which switches between light and dark with animat
+
+[33mcommit 027df1b25265a3fc0e514bbd9ee09967e784c49c[m
+Author: Dhruwal Makwana <dhruwalmakwana@gmail.com>
+Date:   Mon Sep 1 19:54:21 2025 +0000
+
+    Add Theme Switcher
+
+[33mcommit 002d464568ccf9c84c7d4dafa0348870b2ae66e2[m
+Author: Dhruwal Makwana <dhruwalmakwana@gmail.com>
+Date:   Mon Sep 1 19:51:06 2025 +0000
+
+    use this https://www.lightgalleryjs.com/
+
+[33mcommit 7b4834fde1d940cc0e2e3b051e5b712ab4d75137[m
+Author: Dhruwal Makwana <dhruwalmakwana@gmail.com>
+Date:   Mon Sep 1 19:49:51 2025 +0000
+
+    Make the arrow bigger and also show grid view
+
+[33mcommit b52a91971cd23cb673123f99cdaf3149a173ded7[m
+Author: Dhruwal Makwana <dhruwalmakwana@gmail.com>
+Date:   Mon Sep 1 19:48:26 2025 +0000
+
+    I see this error with the app, reported by NextJS, please fix it. The er
+
+[33mcommit daf1fb41684585bbee632c217dcff7e4b4074486[m
+Author: Dhruwal Makwana <dhruwalmakwana@gmail.com>
+Date:   Mon Sep 1 19:45:00 2025 +0000
+
+    Make the Footer Like the latest discord footer with no language swither
+
+[33mcommit 307c07ce4693ba57357f8c6e3c30f02696a062bb[m
+Author: Dhruwal Makwana <dhruwalmakwana@gmail.com>
+Date:   Mon Sep 1 19:44:40 2025 +0000
+
+    make the header red
+
+[33mcommit a025df8ce2ba16b835ed4812ec6f24be404e7cc0[m
+Author: Dhruwal Makwana <dhruwalmakwana@gmail.com>
+Date:   Mon Sep 1 19:43:16 2025 +0000
+
+    make the header color translursent red
+
+[33mcommit c61518444db9c14bb5caae75c0376267fbbcad7a[m
+Author: Dhruwal Makwana <dhruwalmakwana@gmail.com>
+Date:   Mon Sep 1 19:35:43 2025 +0000
+
+    can you make the navbar red and round the edges of log
+
+[33mcommit bc11b5d585ad83385aa9ce1fe11d830df8ee8105[m
+Author: Dhruwal Makwana <dhruwalmakwana@gmail.com>
+Date:   Mon Sep 1 19:34:14 2025 +0000
+
+    make it smaller and resize it upwards not on left side
+
+[33mcommit 4f5b7f9aad5083397ad2416c5d854d1068881821[m
+Author: Dhruwal Makwana <dhruwalmakwana@gmail.com>
+Date:   Mon Sep 1 19:32:37 2025 +0000
+
+    cant see the logo
+
+[33mcommit ae0efac5baf04469832e737678100cc9c376d36c[m
+Author: Dhruwal Makwana <dhruwalmakwana@gmail.com>
+Date:   Mon Sep 1 19:31:48 2025 +0000
+
+    make the logo size bigger and overflow the navbar and then when scrolled
+
+[33mcommit 3f65a54915162b8c1d26810ec3af7efef0806bcc[m
+Author: Dhruwal Makwana <dhruwalmakwana@gmail.com>
+Date:   Mon Sep 1 19:30:12 2025 +0000
+
+    i added logo.jpg in public folder add it to the pag
+
+[33mcommit 8bce7a377d1c363d2cce6fd7ada4685a57788441[m
+Author: Dhruwal Makwana <dhruwalmakwana@gmail.com>
+Date:   Mon Sep 1 19:27:18 2025 +0000
+
+    make a public folder to put all my assets
+
+[33mcommit b96c8322f5aae3f85a60e803a9b2227b7bbb626c[m
+Author: Dhruwal Makwana <dhruwalmakwana@gmail.com>
+Date:   Mon Sep 1 19:25:20 2025 +0000
+
+    use the image for logo dont make it yourself
+
+[33mcommit 138ac753cad3ef10447d08d45eb80de4a22a64ac[m
+Author: Vijay Iyer <vijayiyer07@gmail.com>
+Date:   Mon Sep 1 19:23:48 2025 +0000
+
+    make the logo size big
+
+[33mcommit 995b97111298ccc74c82839d139ceb278063aec3[m
+Author: Vijay Iyer <vijayiyer07@gmail.com>
+Date:   Mon Sep 1 19:23:01 2025 +0000
+
+    Update this logo
+
+[33mcommit 915d2087fbe8b0c6b647dc360ca315fd7f36b29e[m
+Author: Vijay Iyer <vijayiyer07@gmail.com>
+Date:   Mon Sep 1 19:19:34 2025 +0000
+
+    initial commit
