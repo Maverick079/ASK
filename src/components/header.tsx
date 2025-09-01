@@ -1,7 +1,11 @@
+"use client";
+
+import * as React from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import { Logo } from "./logo";
+import { cn } from "@/lib/utils";
 
 const navLinks = [
   { href: "#gallery", label: "Gallery" },
@@ -9,11 +13,31 @@ const navLinks = [
 ];
 
 export function Header() {
+  const [scrolled, setScrolled] = React.useState(false);
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto flex h-24 items-center justify-between px-4">
-        <a href="/" className="flex items-center gap-2">
-          <Logo className="h-20" />
+    <header
+      className={cn(
+        "sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 transition-all duration-300",
+        scrolled ? "h-24" : "h-32"
+      )}
+    >
+      <div className="container mx-auto flex h-full items-center justify-between px-4">
+        <a href="/" className="relative">
+          <Logo 
+            className={cn(
+              "absolute bottom-0 transition-all duration-300",
+              scrolled ? "h-20" : "h-40"
+            )}
+          />
         </a>
 
         {/* Desktop Navigation */}
