@@ -26,8 +26,8 @@ export function Header() {
   return (
     <header
       className={cn(
-        "sticky top-0 z-50 w-full border-b transition-all duration-300",
-        scrolled ? "h-24 bg-primary/90 backdrop-blur-sm" : "h-32 bg-primary/80"
+        "sticky top-0 z-50 w-full border-b border-primary/20 bg-primary transition-all duration-300",
+        scrolled ? "h-24 shadow-md" : "h-32"
       )}
     >
       <div className="container mx-auto flex h-full items-center justify-between px-4">
@@ -65,7 +65,7 @@ export function Header() {
                 <span className="sr-only">Open menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right">
+            <SheetContent side="right" className="bg-primary text-primary-foreground">
               <div className="grid gap-4 py-6">
                 <a href="/" className="flex items-center gap-2 mb-4">
                   <Logo className="h-20" />
@@ -74,12 +74,12 @@ export function Header() {
                   <a
                     key={link.href}
                     href={link.href}
-                    className="text-lg font-medium hover:text-primary transition-colors font-headline"
+                    className="text-lg font-medium hover:text-background transition-colors font-headline"
                   >
                     {link.label}
                   </a>
                 ))}
-                 <Button asChild size="lg" className="font-headline mt-4">
+                 <Button asChild size="lg" variant="secondary" className="font-headline mt-4">
                     <a href="#contact">Contact</a>
                 </Button>
               </div>
