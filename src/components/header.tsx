@@ -6,6 +6,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import { Logo } from "./logo";
 import { cn } from "@/lib/utils";
+import { ThemeSwitcher } from "./theme-switcher";
 
 const navLinks = [
   { href: "#gallery", label: "Gallery" },
@@ -51,13 +52,15 @@ export function Header() {
               {link.label}
             </a>
           ))}
+          <ThemeSwitcher />
           <Button asChild variant="secondary" className="font-headline">
             <a href="#contact">Contact</a>
           </Button>
         </nav>
 
         {/* Mobile Navigation */}
-        <div className="md:hidden">
+        <div className="md:hidden flex items-center gap-2">
+           <ThemeSwitcher />
           <Sheet>
             <SheetTrigger asChild>
               <Button variant="secondary" size="icon">
