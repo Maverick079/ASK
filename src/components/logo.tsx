@@ -9,7 +9,7 @@ export function Logo({ className }: { className?: string }) {
           alt="ASK Brands & Signs Logo"
           width={200}
           height={160}
-          className="h-full w-auto object-contain"
+          className="h-full w-auto object-contain rounded-lg"
           data-ai-hint="logo"
           priority
         />

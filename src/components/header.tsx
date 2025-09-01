@@ -26,7 +26,7 @@ export function Header() {
   return (
     <header
       className={cn(
-        "sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 transition-all duration-300",
+        "sticky top-0 z-50 w-full border-b bg-primary transition-all duration-300",
         scrolled ? "h-24" : "h-32"
       )}
     >
@@ -46,12 +46,12 @@ export function Header() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary font-headline"
+              className="text-sm font-medium text-primary-foreground/80 transition-colors hover:text-primary-foreground font-headline"
             >
               {link.label}
             </a>
           ))}
-          <Button asChild className="font-headline">
+          <Button asChild variant="secondary" className="font-headline">
             <a href="#contact">Contact</a>
           </Button>
         </nav>
@@ -60,7 +60,7 @@ export function Header() {
         <div className="md:hidden">
           <Sheet>
             <SheetTrigger asChild>
-              <Button variant="outline" size="icon">
+              <Button variant="secondary" size="icon">
                 <Menu className="h-5 w-5" />
                 <span className="sr-only">Open menu</span>
               </Button>
