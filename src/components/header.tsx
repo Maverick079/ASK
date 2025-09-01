@@ -31,11 +31,11 @@ export function Header() {
       )}
     >
       <div className="container mx-auto flex h-full items-center justify-between px-4">
-        <a href="/" className="relative">
+        <a href="/" className="relative h-full w-40">
           <Logo 
             className={cn(
-              "absolute bottom-0 transition-all duration-300",
-              scrolled ? "h-20" : "h-40"
+              "absolute -bottom-8 transition-all duration-300",
+              scrolled ? "h-28" : "h-40"
             )}
           />
         </a>
