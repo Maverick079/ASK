@@ -1,83 +1,116 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { LightGallery } from "./light-gallery";
 
 const projects = [
   {
     title: "Quantum Solutions Branding",
     category: "Corporate Identity",
-    image: "https://placehold.co/600x400.png",
-    hint: "modern office"
+    images: [
+      { src: "https://picsum.photos/1200/800", hint: "modern office" },
+      { src: "https://picsum.photos/1200/800", hint: "logo design" },
+      { src: "https://picsum.photos/1200/800", hint: "business card" },
+    ],
   },
   {
     title: "Eco Foods Packaging",
     category: "Packaging Design",
-    image: "https://placehold.co/600x400.png",
-    hint: "food packaging"
+    images: [
+        { src: "https://picsum.photos/1200/800", hint: "food packaging" },
+        { src: "https://picsum.photos/1200/800", hint: "organic product" },
+        { src: "https://picsum.photos/1200/800", hint: "label design" },
+    ],
   },
   {
     title: "Starlight Studios Poster",
     category: "Print Design",
-    image: "https://placehold.co/600x400.png",
-    hint: "movie poster"
+    images: [
+        { src: "https://picsum.photos/1200/800", hint: "movie poster" },
+        { src: "https://picsum.photos/1200/800", hint: "film art" },
+        { src: "https://picsum.photos/1200/800", hint: "cinema display" },
+    ],
   },
   {
     title: "Apex Construction Signage",
     category: "Signage",
-    image: "https://placehold.co/600x400.png",
-    hint: "building sign"
+    images: [
+        { src: "https://picsum.photos/1200/800", hint: "building sign" },
+        { src: "https://picsum.photos/1200/800", hint: "construction site" },
+        { src: "https://picsum.photos/1200/800", hint: "3d lettering" },
+    ],
   },
    {
     title: "Momentum Fitness App",
     category: "Digital Branding",
-    image: "https://placehold.co/600x400.png",
-    hint: "fitness app"
+    images: [
+        { src: "https://picsum.photos/1200/800", hint: "fitness app" },
+        { src: "https://picsum.photos/1200/800", hint: "user interface" },
+        { src: "https://picsum.photos/1200/800", hint: "mobile screen" },
+    ],
   },
   {
     title: "Voyage Travel Campaign",
     category: "Marketing",
-    image: "https://placehold.co/600x400.png",
-    hint: "travel advertisement"
+    images: [
+        { src: "https://picsum.photos/1200/800", hint: "travel advertisement" },
+        { src: "https://picsum.photos/1200/800", hint: "brochure design" },
+        { src: "https://picsum.photos/1200/800", hint: "exotic destination" },
+    ],
   },
 ];
 
 export function ProjectGallery() {
-  return (
-    <section id="gallery" className="py-16 md:py-24 bg-secondary/50">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold font-headline">Our Work</h2>
-          <p className="mt-4 text-lg text-muted-foreground font-body">
-            A glimpse into the brands we've helped build and transform.
-          </p>
-        </div>
+  const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8" style={{ perspective: '1000px' }}>
-          {projects.map((project) => (
-            <Card key={project.title} className="overflow-hidden group transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-4" style={{ transformStyle: 'preserve-3d' }}>
-               <div className="transition-transform duration-500 ease-out group-hover:[transform:rotateX(15deg)_rotateY(-15deg)_translateZ(20px)]">
-                <CardContent className="p-0">
-                  <div className="relative">
-                    <Image
-                      src={project.image}
-                      alt={project.title}
-                      width={600}
-                      height={400}
-                      data-ai-hint={project.hint}
-                      className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-                    />
-                     <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300"></div>
+  return (
+    <>
+      <section id="gallery" className="py-16 md:py-24 bg-secondary/50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold font-headline">Our Work</h2>
+            <p className="mt-4 text-lg text-muted-foreground font-body">
+              A glimpse into the brands we've helped build and transform.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8" style={{ perspective: '1000px' }}>
+            {projects.map((project) => (
+              <button key={project.title} onClick={() => setSelectedProject(project)} className="text-left w-full">
+                <Card className="overflow-hidden group transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-4 h-full" style={{ transformStyle: 'preserve-3d' }}>
+                  <div className="transition-transform duration-500 ease-out group-hover:[transform:rotateX(15deg)_rotateY(-15deg)_translateZ(20px)] h-full flex flex-col">
+                    <CardContent className="p-0 flex-grow flex flex-col">
+                      <div className="relative">
+                        <Image
+                          src={project.images[0].src}
+                          alt={project.title}
+                          width={600}
+                          height={400}
+                          data-ai-hint={project.images[0].hint}
+                          className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+                        />
+                        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300"></div>
+                      </div>
+                      <div className="p-4 bg-card mt-auto">
+                        <Badge variant="secondary" className="mb-2 font-body">{project.category}</Badge>
+                        <h3 className="font-semibold font-headline">{project.title}</h3>
+                      </div>
+                    </CardContent>
                   </div>
-                  <div className="p-4 bg-card">
-                    <Badge variant="secondary" className="mb-2 font-body">{project.category}</Badge>
-                    <h3 className="font-semibold font-headline">{project.title}</h3>
-                  </div>
-                </CardContent>
-               </div>
-            </Card>
-          ))}
+                </Card>
+              </button>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <LightGallery
+        project={selectedProject}
+        onClose={() => setSelectedProject(null)}
+      />
+    </>
   );
 }
