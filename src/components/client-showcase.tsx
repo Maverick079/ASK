@@ -1,4 +1,9 @@
+
+"use client";
+
+import * as React from "react";
 import Image from "next/image";
+import Autoplay from "embla-carousel-autoplay";
 import {
   Carousel,
   CarouselContent,
@@ -17,6 +22,10 @@ const clients = [
 ];
 
 export function ClientShowcase() {
+  const plugin = React.useRef(
+    Autoplay({ delay: 2000, stopOnInteraction: false, stopOnMouseEnter: true })
+  );
+
   return (
     <section className="py-12 bg-background">
       <div className="container mx-auto px-4">
@@ -24,15 +33,16 @@ export function ClientShowcase() {
           Trusted by leading brands
         </h3>
         <Carousel
+          plugins={[plugin.current]}
           opts={{
             align: "start",
             loop: true,
           }}
           className="w-full"
         >
-          <CarouselContent>
+          <CarouselContent className="-ml-1">
             {clients.map((client, index) => (
-              <CarouselItem key={index} className="basis-1/2 md:basis-1/3 lg:basis-1/5">
+              <CarouselItem key={index} className="pl-1 basis-1/2 md:basis-1/3 lg:basis-1/5">
                 <div className="p-4 flex justify-center items-center h-full">
                   <Image
                     src={client.logo}
