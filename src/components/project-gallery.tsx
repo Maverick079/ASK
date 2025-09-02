@@ -1,9 +1,12 @@
 
 "use client";
 
-import { useState } from "react";
+import { useRef, useEffect } from "react";
 import { HoverEffect } from "@/components/ui/hover-effect";
-import { LightGallery } from "@/components/light-gallery";
+import lightGallery from "lightgallery";
+import type { LightGallery } from "lightgallery/lightgallery";
+import lgThumbnail from "lightgallery/plugins/thumbnail";
+import lgZoom from "lightgallery/plugins/zoom";
 
 const projects = [
   {
@@ -81,11 +84,38 @@ const projects = [
 
 
 export function ProjectGallery() {
-  const [selectedProject, setSelectedProject] = useState<(typeof projects)[0] | null>(null);
+  const galleryRef = useRef<LightGallery | null>(null);
+  const galleryContainerRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (!galleryContainerRef.current) return;
+    
+    const container = galleryContainerRef.current;
+    
+    galleryRef.current = lightGallery(container, {
+      plugins: [lgZoom, lgThumbnail],
+      speed: 500,
+      download: false,
+    });
+
+    return () => {
+      galleryRef.current?.destroy();
+    };
+  }, []);
 
   const handleProjectClick = (project: (typeof projects)[0]) => {
-    setSelectedProject(project);
+    if (galleryRef.current) {
+        const dynamicEl = project.images.map(image => ({
+            src: image.src,
+            thumb: image.src,
+            subHtml: `<h4>${project.title}</h4><p>${image.hint}</p>`
+        }));
+        galleryRef.current.openGallery(0, {
+            dynamicEl
+        });
+    }
   };
+
 
   return (
     <>
@@ -102,10 +132,7 @@ export function ProjectGallery() {
           </div>
         </div>
       </section>
-      <LightGallery 
-        project={selectedProject}
-        onClose={() => setSelectedProject(null)} 
-      />
+      <div ref={galleryContainerRef} style={{ display: "none" }}></div>
     </>
   );
 }
