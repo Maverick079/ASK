@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import 'lightgallery/css/lightgallery.css';
-@import 'lightgallery/css/lg-zoom.css';
-@import 'lightgallery/css/lg-thumbnail.css';
-
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
