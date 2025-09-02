@@ -1,22 +1,22 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Palette, Lightbulb, HeartHandshake } from "lucide-react";
+import { Palette, Cog, HardHat } from "lucide-react";
 import Image from "next/image";
 
 const values = [
   {
     icon: <Palette className="h-8 w-8 text-primary" />,
-    title: "Creative Excellence",
-    description: "Our designs are not just beautiful; they are strategic assets that communicate your brand's essence.",
+    title: "01 Design",
+    description: "Let us help you enhance your business with a custom designed sign with the support of our expert staff.",
   },
   {
-    icon: <Lightbulb className="h-8 w-8 text-primary" />,
-    title: "AI-Powered Innovation",
-    description: "Leverage our cutting-edge AI tools to rapidly visualize and refine your brand's creative direction.",
+    icon: <Cog className="h-8 w-8 text-primary" />,
+    title: "02 Fabrication",
+    description: "We build signs to last, using only the finest quality materials in the manufacturing process.",
   },
   {
-    icon: <HeartHandshake className="h-8 w-8 text-primary" />,
-    title: "Client-Centric Partnership",
-    description: "We work with you, not just for you. Your vision is the core of our collaborative process.",
+    icon: <HardHat className="h-8 w-8 text-primary" />,
+    title: "03 Installation",
+    description: "Our technicians arrive on-site with a fully equipped vehicle to get the install job done with quality workmanship.",
   },
 ];
 
@@ -40,7 +40,7 @@ export function ValuePropositionSection() {
     <section className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold font-headline">Why Partner With Us?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold font-headline">Why Choose Us?</h2>
           <p className="mt-4 text-lg text-muted-foreground font-body max-w-3xl mx-auto">
             We blend artistic flair with strategic insights to create brands that stand out and signs that speak volumes.
           </p>
