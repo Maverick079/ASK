@@ -1,3 +1,4 @@
+
 import { Card, CardContent } from "@/components/ui/card";
 import { Palette, Cog, HardHat } from "lucide-react";
 import Image from "next/image";
@@ -6,17 +7,17 @@ const values = [
   {
     icon: <Palette className="h-8 w-8 text-primary" />,
     title: "Design",
-    description: "Let us help you enhance your business with a custom designed sign with the support of our expert staff.",
+    description: "Our expert in-house design team works with you to create the perfect custom sign for your business.",
   },
   {
     icon: <Cog className="h-8 w-8 text-primary" />,
     title: "Fabrication",
-    description: "We build signs to last, using only the finest quality materials in the manufacturing process.",
+    description: "All our signs are fabricated in-house, using only the finest quality materials to ensure a durable product.",
   },
   {
     icon: <HardHat className="h-8 w-8 text-primary" />,
     title: "Installation",
-    description: "Our technicians arrive on-site with a fully equipped vehicle to get the install job done with quality workmanship.",
+    description: "Our own professional technicians handle the entire installation process, ensuring quality workmanship from start to finish.",
   },
 ];
 
