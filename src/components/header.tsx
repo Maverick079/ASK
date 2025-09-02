@@ -1,3 +1,4 @@
+
 "use client";
 
 import * as React from "react";
@@ -28,15 +29,15 @@ export function Header() {
     <header
       className={cn(
         "sticky top-0 z-50 w-full border-b border-primary/20 bg-primary transition-all duration-300",
-        scrolled ? "h-24 shadow-md" : "h-32"
+        scrolled ? "h-20 shadow-md md:h-24" : "h-28 md:h-32"
       )}
     >
       <div className="container mx-auto flex h-full items-center justify-between px-4">
         <a href="/" className="relative h-full flex items-center">
           <Logo 
             className={cn(
-              "absolute -bottom-8 transition-all duration-300",
-              scrolled ? "h-28" : "h-40"
+              "absolute -bottom-6 transition-all duration-300 md:-bottom-8",
+              scrolled ? "h-24 md:h-28" : "h-32 md:h-40"
             )}
           />
         </a>
