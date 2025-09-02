@@ -5,17 +5,17 @@ import Image from "next/image";
 const values = [
   {
     icon: <Palette className="h-8 w-8 text-primary" />,
-    title: "01 Design",
+    title: "Design",
     description: "Let us help you enhance your business with a custom designed sign with the support of our expert staff.",
   },
   {
     icon: <Cog className="h-8 w-8 text-primary" />,
-    title: "02 Fabrication",
+    title: "Fabrication",
     description: "We build signs to last, using only the finest quality materials in the manufacturing process.",
   },
   {
     icon: <HardHat className="h-8 w-8 text-primary" />,
-    title: "03 Installation",
+    title: "Installation",
     description: "Our technicians arrive on-site with a fully equipped vehicle to get the install job done with quality workmanship.",
   },
 ];
