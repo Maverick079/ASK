@@ -1,14 +1,7 @@
 
 "use client";
 
-import * as React from "react";
 import Image from "next/image";
-import Autoplay from "embla-carousel-autoplay";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-} from "@/components/ui/carousel";
 
 const clients = [
   { name: "Innovate Inc.", logo: "https://placehold.co/150x60.png", hint: "tech startup" },
@@ -22,9 +15,7 @@ const clients = [
 ];
 
 export function ClientShowcase() {
-  const plugin = React.useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: false, stopOnMouseEnter: true })
-  );
+  const duplicatedClients = [...clients, ...clients];
 
   return (
     <section className="py-12 bg-background">
@@ -32,18 +23,16 @@ export function ClientShowcase() {
         <h3 className="text-center text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-8 font-body">
           Trusted by leading brands
         </h3>
-        <Carousel
-          plugins={[plugin.current]}
-          opts={{
-            align: "start",
-            loop: true,
+        <div
+          className="relative w-full overflow-hidden"
+          style={{
+            maskImage: "linear-gradient(to right, transparent, black 10%, black 90%, transparent)"
           }}
-          className="w-full"
         >
-          <CarouselContent className="-ml-1">
-            {clients.map((client, index) => (
-              <CarouselItem key={index} className="pl-1 basis-1/2 md:basis-1/3 lg:basis-1/5">
-                <div className="p-4 flex justify-center items-center h-full">
+          <div className="flex animate-[scroll-x_40s_linear_infinite]">
+            {duplicatedClients.map((client, index) => (
+              <div key={index} className="flex-shrink-0 mx-8" style={{ width: '160px' }}>
+                <div className="flex justify-center items-center h-full">
                   <Image
                     src={client.logo}
                     alt={client.name}
@@ -53,10 +42,10 @@ export function ClientShowcase() {
                     className="object-contain"
                   />
                 </div>
-              </CarouselItem>
+              </div>
             ))}
-          </CarouselContent>
-        </Carousel>
+          </div>
+        </div>
       </div>
     </section>
   );
