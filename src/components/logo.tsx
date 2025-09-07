@@ -15,12 +15,12 @@ export function Logo({ className, variant = 'ASK-red' }: { className?: string; v
     const isUA = variant.startsWith('UA');
 
     return (
-      <div className={cn("relative", isUA ? "w-32" : "w-40", className)}>
+      <div className={cn("relative", isUA ? "w-40" : "w-40", className)}>
         <Image 
           src={logoSrc}
           alt="ASK Brands & Signs Logo"
-          width={isUA ? 120 : 290}
-          height={isUA ? 120 : 100}
+          width={isUA ? 200 : 290}
+          height={isUA ? 200 : 100}
           className="h-full w-auto object-contain"
           data-ai-hint="logo"
           priority
