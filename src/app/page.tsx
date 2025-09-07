@@ -1,6 +1,5 @@
 import { Header } from '@/components/header';
 import { HeroSection } from '@/components/hero-section';
-import { ClientShowcase } from '@/components/client-showcase';
 import { AboutUsSection } from '@/components/about-us';
 import { ValuePropositionSection } from '@/components/value-proposition';
 import { ProjectGallery } from '@/components/project-gallery';
@@ -13,7 +12,6 @@ export default function Home() {
       <Header />
       <main className="flex-grow">
         <HeroSection />
-        <ClientShowcase />
         <ValuePropositionSection />
         <ProjectGallery />
         <AboutUsSection />
