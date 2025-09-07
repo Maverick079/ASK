@@ -4,10 +4,10 @@ import { cn } from "@/lib/utils";
 type LogoVariant = 'ASK-red' | 'ASK-white' | 'UA-red' | 'UA-white';
 
 const logoMap: Record<LogoVariant, string> = {
-  'ASK-red': '/logos/ASK-red.png',
-  'ASK-white': '/logos/ASK-white.png',
-  'UA-red': '/logos/UA-red.png',
-  'UA-white': '/logos/UA-white.png',
+  'ASK-red': '/logos/Logo-ASK-PNG-red.png',
+  'ASK-white': '/logos/Logo-ASK-PNG-white.png',
+  'UA-red': '/logos/Logo-UA-PNG-red.png',
+  'UA-white': '/logos/Logo-UA-PNG-white.png',
 };
 
 export function Logo({ className, variant = 'ASK-red' }: { className?: string; variant?: LogoVariant }) {

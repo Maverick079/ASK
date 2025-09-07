@@ -78,8 +78,10 @@ export function Footer() {
         </div>
 
         <div className="mt-16 border-t border-primary/50 pt-8 flex flex-col sm:flex-row justify-between items-center">
-            <div className="flex items-center gap-2">
+            <div className="flex flex-col sm:flex-row items-center gap-4 text-center">
                 <Logo variant="ASK-red" className="h-16" />
+                <span className="font-body text-sm text-muted-foreground">in association with</span>
+                <Logo variant="UA-red" className="h-16" />
             </div>
             <Button asChild variant="secondary" className="font-headline mt-4 sm:mt-0">
                 <a href="#contact">Get a Quote</a>
