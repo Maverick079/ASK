@@ -30,8 +30,11 @@ const getProjectData = () => {
       hint: "corporate event",
       category: "Events",
       images: [
-        { src: "/gallery/events/1.jpg", hint: "conference event" },
-        { src: "/gallery/events/2.jpg", hint: "gala dinner" },
+        { src: "https://live.staticflickr.com/65535/54772148534_54ab3499e6_w.jpg", hint: "exhibition stand" },
+        { src: "https://live.staticflickr.com/65535/54772157263_32ffa1aa1a_w.jpg", hint: "booth design" },
+        { src: "https://live.staticflickr.com/65535/54771069732_308b098518_w.jpg", hint: "trade show" },
+        { src: "https://live.staticflickr.com/65535/54771914676_902c380da7_w.jpg", hint: "event display" },
+        { src: "https://live.staticflickr.com/65535/54772252600_4d88c2ee43_w.jpg", hint: "interactive kiosk" },
       ],
     },
     {
