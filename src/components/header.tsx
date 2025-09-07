@@ -34,7 +34,8 @@ export function Header() {
     >
       <div className="container mx-auto flex h-full items-center justify-between px-4">
         <a href="/" className="flex items-center">
-          <Logo 
+          <Logo
+            variant="ASK-white"
             className={cn(
               "transition-all duration-300",
               scrolled ? "h-12 md:h-16" : "h-16 md:h-20"
@@ -72,7 +73,7 @@ export function Header() {
             <SheetContent side="right" className="bg-primary text-primary-foreground">
               <div className="grid gap-4 py-6">
                 <a href="/" className="flex items-center gap-2 mb-4">
-                  <Logo className="h-16" />
+                  <Logo variant="ASK-white" className="h-16" />
                 </a>
                 {navLinks.map((link) => (
                   <a

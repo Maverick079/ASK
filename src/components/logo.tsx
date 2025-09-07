@@ -1,14 +1,26 @@
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 
-export function Logo({ className }: { className?: string }) {
+type LogoVariant = 'ASK-red' | 'ASK-white' | 'UA-red' | 'UA-white';
+
+const logoMap: Record<LogoVariant, string> = {
+  'ASK-red': '/logos/ASK-red.png',
+  'ASK-white': '/logos/ASK-white.png',
+  'UA-red': '/logos/UA-red.png',
+  'UA-white': '/logos/UA-white.png',
+};
+
+export function Logo({ className, variant = 'ASK-red' }: { className?: string; variant?: LogoVariant }) {
+    const logoSrc = logoMap[variant] || logoMap['ASK-red'];
+    const isUA = variant.startsWith('UA');
+
     return (
-      <div className={cn("relative w-40", className)}>
+      <div className={cn("relative", isUA ? "w-24" : "w-40", className)}>
         <Image 
-          src="/logo.png"
+          src={logoSrc}
           alt="ASK Brands & Signs Logo"
-          width={290}
-          height={100}
+          width={isUA ? 120 : 290}
+          height={isUA ? 120 : 100}
           className="h-full w-auto object-contain"
           data-ai-hint="logo"
           priority
