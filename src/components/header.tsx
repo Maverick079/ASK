@@ -33,11 +33,11 @@ export function Header() {
       )}
     >
       <div className="container mx-auto flex h-full items-center justify-between px-4">
-        <a href="/" className="relative h-full flex items-center">
+        <a href="/" className="flex items-center">
           <Logo 
             className={cn(
-              "absolute -bottom-4 transition-all duration-300 md:-bottom-6",
-              scrolled ? "h-20 md:h-24" : "h-24 md:h-28"
+              "transition-all duration-300",
+              scrolled ? "h-12 md:h-16" : "h-16 md:h-20"
             )}
           />
         </a>
@@ -72,7 +72,7 @@ export function Header() {
             <SheetContent side="right" className="bg-primary text-primary-foreground">
               <div className="grid gap-4 py-6">
                 <a href="/" className="flex items-center gap-2 mb-4">
-                  <Logo className="h-20" />
+                  <Logo className="h-16" />
                 </a>
                 {navLinks.map((link) => (
                   <a

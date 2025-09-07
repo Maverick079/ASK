@@ -5,7 +5,7 @@ export function Logo({ className }: { className?: string }) {
     return (
       <div className={cn("relative w-40", className)}>
         <Image 
-          src="/logo.jpg"
+          src="/logo.png"
           alt="ASK Brands & Signs Logo"
           width={290}
           height={100}
