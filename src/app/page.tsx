@@ -12,15 +12,15 @@ const getProjectData = () => {
     {
       title: "Exhibition Stands",
       description: "Creative and impactful exhibition stands that draw a crowd.",
-      thumbnail: "./public/gallery/exibitions/1.png",
+      thumbnail: "/gallery/exhibitions/1.png",
       hint: "exhibition stand",
       category: "Exhibition",
       images: [
-        { src: "./public/gallery/exibitions/1.png", hint: "Pic 1" },
-        { src: "./public/gallery/exibitions/2.png", hint: "Pic 2" },
-        { src: "./public/gallery/exibitions/3.png", hint: "Pic 3" },
-        { src: "./public/gallery/exibitions/4.png", hint: "Pic 4" },
-        { src: "./public/gallery/exibitions/5.png", hint: "Pic 5" },
+        { src: "/gallery/exhibitions/1.png", hint: "Pic 1" },
+        { src: "/gallery/exhibitions/2.png", hint: "Pic 2" },
+        { src: "/gallery/exhibitions/3.png", hint: "Pic 3" },
+        { src: "/gallery/exhibitions/4.png", hint: "Pic 4" },
+        { src: "/gallery/exhibitions/5.png", hint: "Pic 5" },
       ],
     },
     {
