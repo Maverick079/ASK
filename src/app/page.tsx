@@ -17,10 +17,10 @@ const getProjectData = () => {
       category: "Exhibition",
       images: [
         { src: "https://live.staticflickr.com/65535/54772148534_54ab3499e6_w.jpg", hint: "exhibition stand" },
-        { src: "https://flic.kr/p/2rs1o1u", hint: "booth design" },
-        { src: "https://flic.kr/p/2rrW3Qu", hint: "trade show" },
+        { src: "https://live.staticflickr.com/65535/54772157263_32ffa1aa1a_w.jpg", hint: "booth design" },
+        { src: "https://live.staticflickr.com/65535/54771069732_308b098518_w.jpg", hint: "trade show" },
         { src: "https://live.staticflickr.com/65535/54771914676_902c380da7_w.jpg", hint: "event display" },
-        { src: "https://flic.kr/p/2rs2C82", hint: "interactive kiosk" },
+        { src: "https://live.staticflickr.com/65535/54772252600_4d88c2ee43_w.jpg", hint: "interactive kiosk" },
       ],
     },
     {
