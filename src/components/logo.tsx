@@ -15,7 +15,7 @@ export function Logo({ className, variant = 'ASK-red' }: { className?: string; v
     const isUA = variant.startsWith('UA');
 
     return (
-      <div className={cn("relative", isUA ? "w-24" : "w-40", className)}>
+      <div className={cn("relative", isUA ? "w-32" : "w-40", className)}>
         <Image 
           src={logoSrc}
           alt="ASK Brands & Signs Logo"
