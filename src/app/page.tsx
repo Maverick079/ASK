@@ -26,7 +26,7 @@ const getProjectData = () => {
     {
       title: "Event Management",
       description: "Seamless execution of corporate and promotional events.",
-      thumbnail: "/gallery/events/1.jpg",
+      thumbnail: "https://live.staticflickr.com/65535/54772148534_54ab3499e6_w.jpg",
       hint: "corporate event",
       category: "Events",
       images: [
