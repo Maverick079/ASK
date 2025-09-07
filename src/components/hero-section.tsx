@@ -8,9 +8,7 @@ export function HeroSection() {
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="text-left">
             <h1 className="text-4xl md:text-6xl font-bold font-headline tracking-tighter mb-4">
-              We make your <span className="text-primary">Brand</span> stronger
-              <br />
-              than you think
+              We make your <span className="text-primary">Brand</span> stronger than you think
             </h1>
             <p className="max-w-xl text-lg md:text-xl text-muted-foreground mb-8 font-body">
               From concept to creation, we blend artistic flair with strategic insights to build brands that stand out and signs that speak volumes.
