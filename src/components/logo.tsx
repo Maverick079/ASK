@@ -7,9 +7,9 @@ export function Logo({ className }: { className?: string }) {
         <Image 
           src="/logo.jpg"
           alt="ASK Brands & Signs Logo"
-          width={200}
-          height={160}
-          className="h-full w-auto object-contain rounded-lg"
+          width={290}
+          height={100}
+          className="h-full w-auto object-contain"
           data-ai-hint="logo"
           priority
         />
