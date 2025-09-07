@@ -12,15 +12,15 @@ const getProjectData = () => {
     {
       title: "Exhibition Stands",
       description: "Creative and impactful exhibition stands that draw a crowd.",
-      thumbnail: "/gallery/exhibition/1.jpg",
+      thumbnail: "https://flic.kr/p/2rs37sL",
       hint: "exhibition stand",
       category: "Exhibition",
       images: [
-        { src: "/gallery/exhibition/1.jpg", hint: "exhibition stand" },
-        { src: "/gallery/exhibition/2.jpg", hint: "booth design" },
-        { src: "/gallery/exhibition/3.jpg", hint: "trade show" },
-        { src: "/gallery/exhibition/4.jpg", hint: "event display" },
-        { src: "/gallery/exhibition/5.jpg", hint: "interactive kiosk" },
+        { src: "https://flic.kr/p/2rs37sL", hint: "exhibition stand" },
+        { src: "https://flic.kr/p/2rs1o1u", hint: "booth design" },
+        { src: "https://flic.kr/p/2rrW3Qu", hint: "trade show" },
+        { src: "https://flic.kr/p/2rs2zww", hint: "event display" },
+        { src: "https://flic.kr/p/2rs2C82", hint: "interactive kiosk" },
       ],
     },
     {
