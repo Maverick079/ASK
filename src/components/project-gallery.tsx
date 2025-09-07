@@ -5,10 +5,12 @@ import 'lightgallery/css/lightgallery.css';
 import 'lightgallery/css/lg-zoom.css';
 import 'lightgallery/css/lg-thumbnail.css';
 
-import { HoverEffect } from "@/components/ui/hover-effect";
+import type { LightGallery } from 'lightgallery/lightgallery';
 import lightGallery from "lightgallery";
 import lgThumbnail from "lightgallery/plugins/thumbnail";
 import lgZoom from "lightgallery/plugins/zoom";
+import { useEffect, useRef } from 'react';
+import { HoverEffect } from "@/components/ui/hover-effect";
 
 type Project = {
   title: string;
@@ -20,6 +22,25 @@ type Project = {
 };
 
 export function ProjectGallery({ projects }: { projects: Project[] }) {
+  const lightGalleryRef = useRef<LightGallery | null>(null);
+  const galleryContainerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (galleryContainerRef.current) {
+      const lg = lightGallery(galleryContainerRef.current, {
+        plugins: [lgZoom, lgThumbnail],
+        speed: 500,
+        download: false,
+        licenseKey: '0000-0000-000-0000'
+      });
+      lightGalleryRef.current = lg;
+
+      return () => {
+        lg.destroy();
+      };
+    }
+  }, []);
+
   const handleProjectClick = (project: Project) => {
     if (!project.images || project.images.length === 0) {
       console.warn("No images to display for this project.");
@@ -27,21 +48,14 @@ export function ProjectGallery({ projects }: { projects: Project[] }) {
     }
 
     const dynamicEl = project.images.map(image => ({
-        src: image.src,
-        thumb: image.src,
-        subHtml: `<h4>${project.title}</h4><p>${image.hint}</p>`
+      src: image.src,
+      thumb: image.src,
+      subHtml: `<h4>${project.title}</h4><p>${image.hint}</p>`
     }));
-    
-    const lgContainer = document.getElementById('lg-container');
-    if (lgContainer) {
-      const lg = lightGallery(lgContainer, {
-          dynamic: true,
-          dynamicEl,
-          plugins: [lgZoom, lgThumbnail],
-          speed: 500,
-          download: false,
-      });
-      lg.openGallery(0);
+
+    if (lightGalleryRef.current) {
+      lightGalleryRef.current.refresh(dynamicEl);
+      lightGalleryRef.current.openGallery(0);
     }
   };
 
@@ -60,7 +74,7 @@ export function ProjectGallery({ projects }: { projects: Project[] }) {
           </div>
         </div>
       </section>
-      <div id="lg-container" style={{ display: 'none' }}></div>
+      <div ref={galleryContainerRef} style={{ display: 'none' }}></div>
     </>
   );
 }
