@@ -78,11 +78,11 @@ export function Footer() {
         </div>
 
         <div className="mt-16 border-t border-primary/50 pt-8 flex flex-col sm:flex-row justify-between items-center">
-            <div className="flex flex-col items-center gap-2">
-                <span className="font-body text-xs italic text-muted-foreground">in association with</span>
-                <div className="flex items-center gap-4">
-                    <Logo variant="ASK-red" className="h-20" />
-                    <div className="h-16 w-px bg-border"></div>
+            <div className="flex items-end gap-4">
+                <Logo variant="ASK-red" className="h-20" />
+                <div className="h-16 w-px bg-border"></div>
+                <div className="flex flex-col items-center gap-2">
+                    <span className="font-body text-xs italic text-muted-foreground">in association with</span>
                     <Logo variant="UA-red" className="h-20" />
                 </div>
             </div>
