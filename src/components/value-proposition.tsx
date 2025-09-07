@@ -25,13 +25,13 @@ const testimonials = [
   {
     quote: "Working with ASK was a game-changer. Their AI tool helped us find our visual identity in minutes!",
     author: "CEO, Innovate Inc.",
-    avatar: "https://placehold.co/48x48.png",
+    avatar: "https://picsum.photos/48/48",
     hint: "person portrait"
   },
   {
     quote: "The team's creativity and professionalism exceeded all our expectations. Our new branding has received amazing feedback.",
     author: "Marketing Director, Eco Foods",
-    avatar: "https://placehold.co/48x48.png",
+    avatar: "https://picsum.photos/48/48",
     hint: "woman portrait"
   },
 ];

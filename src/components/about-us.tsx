@@ -6,13 +6,13 @@ const teamMembers = [
   {
     name: "Vijay",
     role: "Lead Designer",
-    avatar: "https://placehold.co/100x100.png",
+    avatar: "https://picsum.photos/100/100",
     hint: "male portrait"
   },
   {
     name: "AI Assistant",
     role: "Creative Strategist",
-    avatar: "https://placehold.co/100x100.png",
+    avatar: "https://picsum.photos/100/100",
     hint: "robot face"
   },
 ];
