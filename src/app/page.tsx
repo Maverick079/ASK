@@ -12,12 +12,15 @@ const getProjectData = () => {
     {
       title: "Exhibition Stands",
       description: "Creative and impactful exhibition stands that draw a crowd.",
-      thumbnail: "https://picsum.photos/400/300",
+      thumbnail: "./public/gallery/exibitions/1.png",
       hint: "exhibition stand",
       category: "Exhibition",
       images: [
-        { src: "https://picsum.photos/800/600", hint: "exhibition stand" },
-        { src: "https://picsum.photos/800/600", hint: "trade show" },
+        { src: "./public/gallery/exibitions/1.png", hint: "Pic 1" },
+        { src: "./public/gallery/exibitions/2.png", hint: "Pic 2" },
+        { src: "./public/gallery/exibitions/3.png", hint: "Pic 3" },
+        { src: "./public/gallery/exibitions/4.png", hint: "Pic 4" },
+        { src: "./public/gallery/exibitions/5.png", hint: "Pic 5" },
       ],
     },
     {
