@@ -26,7 +26,7 @@ export function HeroSection() {
           </div>
           <div className="relative h-80 w-full md:h-96 rounded-lg overflow-hidden">
              <Image 
-                src="https://picsum.photos/600/400"
+                src="/header.png"
                 alt="Branding and design concept"
                 fill
                 className="object-cover"
