@@ -24,12 +24,12 @@ export function HeroSection() {
               </Button>
             </div>
           </div>
-          <div className="relative h-80 w-full md:h-96 rounded-lg overflow-hidden">
+          <div className="relative h-80 w-full md:h-96 rounded-lg overflow-hidden bg-secondary/30">
              <Image 
                 src="/header.png"
                 alt="Branding and design concept"
                 fill
-                className="object-cover"
+                className="object-contain"
                 data-ai-hint="branding design"
              />
           </div>
