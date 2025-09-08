@@ -90,7 +90,7 @@ const getProjectData = () => {
         { src: "https://live.staticflickr.com/65535/54773338639_8e853f0213_w.jpg", hint: "illuminated sign" },
         { src: "https://live.staticflickr.com/65535/54772265032_00d8e41ce8_w.jpg", hint: "illuminated sign" },
         { src: "https://live.staticflickr.com/65535/54772265062_9f03e11e92_w.jpg", hint: "illuminated sign" },
-        { src: "https://live.staticflickr.com/65535/54773450115_97fbde11e7_w.jpg", hint: "illuminated sign" },
+        { src: "https://live.staticflickr.com/65535/54773450115_97fbde11e7_w.jpg", hint: "engraved nameplate" },
       ],
     }
   ];

@@ -1,7 +1,6 @@
 
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardTitle } from "@/components/ui/card";
 import { Palette, Cog, HardHat } from "lucide-react";
-import Image from "next/image";
 
 const values = [
   {
@@ -23,16 +22,14 @@ const values = [
 
 const testimonials = [
   {
-    quote: "Working with ASK was a game-changer. Their AI tool helped us find our visual identity in minutes!",
-    author: "CEO, Innovate Inc.",
-    avatar: "https://picsum.photos/48/48",
-    hint: "person portrait"
+    title: "Our Differentiator",
+    quote: "We're often asked 'where did that idea come from?' The truth is that all our ideas come from the client. However unusual or inspired the end result, it all begins and ends with the client. It's a team-work we believe in which derives good briefs and great clients to enable great ideas and allow excellent results.",
+    author: "ASK Brands & Signs",
   },
   {
-    quote: "The team's creativity and professionalism exceeded all our expectations. Our new branding has received amazing feedback.",
-    author: "Marketing Director, Eco Foods",
-    avatar: "https://picsum.photos/48/48",
-    hint: "woman portrait"
+    title: "Our Approch",
+    quote: "Simplicity and creativity, keeping them hand in hand is our motto. We keep a tab of best examples of contemporary graphic design and typography which helps us to keep our finger on the pulse of what's new, different and engaging in print & multimedia.",
+    author: "ASK Brands & Signs",
   },
 ];
 
@@ -61,22 +58,17 @@ export function ValuePropositionSection() {
 
         <div className="grid lg:grid-cols-2 gap-8">
           {testimonials.map((testimonial) => (
-            <Card key={testimonial.author} className="transition-all duration-300 ease-in-out hover:shadow-xl hover:-translate-y-2">
+            <Card key={testimonial.title} className="transition-all duration-300 ease-in-out hover:shadow-xl hover:-translate-y-2">
+              <CardTitle className="p-6 italic text-center w-full">
+                {testimonial.title}
+              </CardTitle>
               <CardContent className="p-6">
                 <blockquote className="text-lg font-body mb-4 italic text-foreground/80">
                   “{testimonial.quote}”
                 </blockquote>
                 <div className="flex items-center gap-4">
-                  <Image
-                    src={testimonial.avatar}
-                    alt={testimonial.author}
-                    width={48}
-                    height={48}
-                    data-ai-hint={testimonial.hint}
-                    className="rounded-full"
-                  />
                   <div>
-                    <p className="font-semibold font-headline">{testimonial.author}</p>
+                    <p className="font-semibold font-headline">- {testimonial.author}</p>
                   </div>
                 </div>
               </CardContent>
