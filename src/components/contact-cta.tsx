@@ -11,7 +11,7 @@ export function ContactCTA() {
           Let's talk about how we can elevate your brand to the next level. We're excited to hear your ideas.
         </p>
         <Button asChild size="lg" variant="secondary" className="font-headline text-lg bg-background text-foreground hover:bg-background/90">
-          <a href="mailto:hello@askbrands.com">Get in Touch</a>
+          <a href="https://wa.me/917400049015" target="_blank" rel="noopener noreferrer">Get in Touch</a>
         </Button>
       </div>
     </section>
