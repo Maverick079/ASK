@@ -11,7 +11,7 @@ export function HeroSection() {
               We make your <span className="text-primary">BRAND</span> stronger than you think
             </h1>
             <p className="max-w-xl text-lg md:text-xl text-muted-foreground mb-8 font-body">
-              From concept to creation, we blend artistic flair with strategic insights to build brands that stand out and signs that speak volumes.
+             So why be the same and equal when you can be different & better?
             </p>
             <div className="flex justify-start gap-4">
               <Button asChild size="lg" className="font-headline">

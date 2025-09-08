@@ -5,7 +5,7 @@ import { ThemeProvider } from '@/components/theme-provider';
 
 export const metadata: Metadata = {
   title: 'ASK',
-  description: 'AI-powered branding and design by ASK Brands & Signs',
+  description: 'Branding and design by ASK Brands & Signs',
 };
 
 export default function RootLayout({
