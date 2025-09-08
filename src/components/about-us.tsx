@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Users, Target, Eye } from "lucide-react";
 
@@ -6,20 +6,14 @@ const teamMembers = [
   {
     name: "Ashwin",
     role: "Lead Designer",
-    avatar: "https://picsum.photos/seed/ashwin/64/64",
-    hint: "portrait photo",
   },
   {
     name: "Sameer",
     role: "Creative Strategist",
-    avatar: "https://picsum.photos/seed/sameer/64/64",
-    hint: "portrait photo",
   },
   {
     name: "Shubhangi",
     role: "Creative Strategist",
-    avatar: "https://picsum.photos/seed/shubhangi/64/64",
-    hint: "portrait photo",
   },
 ];
 
@@ -70,14 +64,6 @@ export function AboutUsSection() {
                     <CardContent className="space-y-4">
                         {teamMembers.map((member) => (
                         <div key={member.name} className="flex items-center gap-4">
-                            <Image
-                            src={member.avatar}
-                            alt={member.name}
-                            width={64}
-                            height={64}
-                            data-ai-hint={member.hint}
-                            className="rounded-full"
-                            />
                             <div>
                             <h4 className="font-semibold font-headline">{member.name}</h4>
                             <p className="text-sm text-muted-foreground font-body">{member.role}</p>
