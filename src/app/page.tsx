@@ -12,7 +12,7 @@ const getProjectData = () => {
     {
       title: "Exhibition Stands",
       description: "Creative and impactful exhibition stands that draw a crowd.",
-      thumbnail: "https://live.staticflickr.com/65535/54772148534_54ab3499e6_w.jpg",
+      thumbnail: "https://live.staticflickr.com/65535/54773324410_804f054972_w.jpg",
       hint: "exhibition stand",
       category: "Exhibition",
       images: [
