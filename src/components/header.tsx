@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetClose, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import { Logo } from "./logo";
 import { cn } from "@/lib/utils";
@@ -15,6 +15,7 @@ const navLinks = [
 
 export function Header() {
   const [scrolled, setScrolled] = React.useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -23,6 +24,10 @@ export function Header() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleLinkClick = () => {
+    setIsMobileMenuOpen(false);
+  };
 
   return (
     <header
@@ -62,7 +67,7 @@ export function Header() {
         {/* Mobile Navigation */}
         <div className="md:hidden flex items-center gap-2">
            <ThemeSwitcher />
-          <Sheet>
+          <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
             <SheetTrigger asChild>
               <Button variant="secondary" size="icon">
                 <Menu className="h-5 w-5" />
@@ -71,20 +76,21 @@ export function Header() {
             </SheetTrigger>
             <SheetContent side="right" className="bg-primary text-primary-foreground">
               <div className="grid gap-4 py-6">
-                <a href="/" className="flex items-center gap-2 mb-4">
+                <a href="/" onClick={handleLinkClick} className="flex items-center gap-2 mb-4">
                   <Logo variant="ASK-white" className="h-16" />
                 </a>
                 {navLinks.map((link) => (
                   <a
                     key={link.href}
                     href={link.href}
+                    onClick={handleLinkClick}
                     className="text-lg font-medium hover:text-background transition-colors font-headline"
                   >
                     {link.label}
                   </a>
                 ))}
                  <Button asChild size="lg" variant="secondary" className="font-headline mt-4">
-                    <a href="#contact">Contact</a>
+                    <a href="#contact" onClick={handleLinkClick}>Contact</a>
                 </Button>
               </div>
             </SheetContent>
