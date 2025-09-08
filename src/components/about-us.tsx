@@ -4,13 +4,19 @@ import { Users, Target, Eye } from "lucide-react";
 
 const teamMembers = [
   {
-    name: "Vijay",
+    name: "Ashwin",
     role: "Lead Designer",
     avatar: "https://picsum.photos/100/100",
     hint: "male portrait"
   },
   {
-    name: "AI Assistant",
+    name: "Sameer",
+    role: "Creative Strategist",
+    avatar: "https://picsum.photos/100/100",
+    hint: "robot face"
+  },
+  {
+    name: "Shubhangi",
     role: "Creative Strategist",
     avatar: "https://picsum.photos/100/100",
     hint: "robot face"
