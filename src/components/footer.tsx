@@ -59,7 +59,7 @@ export function Footer() {
               <h4 className="font-headline text-primary font-semibold mb-4 flex items-center gap-2"><MapPin className="h-5 w-5" /> Location</h4>
               <div className="rounded-lg overflow-hidden border border-primary/20">
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d338.8076274481346!2d73.10092787250275!3d19.20014156509579!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1757352060320!5m2!1sen!2sin"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.950157303124!2d73.100716!3d19.200381!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDEyJzAxLjQiTiA3M8KwMDYnMDMuOCJF!5e0!3m2!1sen!2sin!4v1620923899432!5m2!1sen!2sin"
                     width="100%"
                     height="150"
                     style={{ border: 0 }}
@@ -80,8 +80,8 @@ export function Footer() {
                     <Logo variant="UA-red" className="h-20" />
                 </div>
             </div>
-            <Button asChild variant="secondary" className="font-headline mt-4 sm:mt-0">
-                <a href="https://wa.me/917400049015" target="_blank" rel="noopener noreferrer">Get a Quote</a>
+            <Button asChild variant="secondary" className="font-headline mt-4 sm:mt-0" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/917400049015">Get a Quote</a>
             </Button>
         </div>
         <div className="mt-8 text-center text-xs text-muted-foreground/50 font-body">
