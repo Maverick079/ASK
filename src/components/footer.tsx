@@ -7,35 +7,15 @@ const footerLinks = [
     title: "Company",
     links: [
       { label: "About", href: "#about" },
-      { label: "Careers", href: "#" },
-      { label: "Brand Center", href: "#" },
-      { label: "Blog", href: "#" },
+      { label: "Our Work", href: "#gallery" },
+      { label: "Contact", href: "#contact" },
     ],
   },
   {
-    title: "Services",
+    title: "Connect",
     links: [
-      { label: "Branding", href: "#" },
-      { label: "Signage", href: "#" },
-      { label: "Digital Design", href: "#" },
-      { label: "Print Design", href: "#" },
-    ],
-  },
-  {
-    title: "Resources",
-    links: [
-      { label: "Support", href: "mailto:hello@askbrands.com" },
-      { label: "Safety", href: "#" },
-      { label: "Feedback", href: "#" },
-    ],
-  },
-  {
-    title: "Policies",
-    links: [
-      { label: "Terms", href: "#" },
-      { label: "Privacy", href: "#" },
-      { label: "Cookie Settings", href: "#" },
-      { label: "Guidelines", href: "#" },
+      { label: "WhatsApp", href: "https://wa.me/917400049015" },
+      { label: "Email", href: "mailto:hello@askbrands.com" },
     ],
   },
 ];
@@ -46,16 +26,16 @@ export function Footer() {
     <footer className="bg-secondary text-secondary-foreground">
       <div className="container mx-auto px-4 pt-16 pb-8">
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
-            <div className="col-span-2 md:col-span-1 mb-8 md:mb-0">
+            <div className="col-span-2 md:col-span-3 mb-8 md:mb-0">
                 <h3 className="text-3xl font-bold font-headline text-primary mb-4">YOUR BRAND, AMPLIFIED.</h3>
                  <div className="flex gap-4">
-                    <a href="#" aria-label="Twitter" className="text-muted-foreground hover:text-primary">
+                    <a href="#" aria-label="Twitter" className="text-muted-foreground hover:text-primary transition-colors">
                     <Twitter className="h-5 w-5" />
                     </a>
-                    <a href="#" aria-label="Facebook" className="text-muted-foreground hover:text-primary">
+                    <a href="#" aria-label="Facebook" className="text-muted-foreground hover:text-primary transition-colors">
                     <Facebook className="h-5 w-5" />
                     </a>
-                    <a href="#" aria-label="LinkedIn" className="text-muted-foreground hover:text-primary">
+                    <a href="#" aria-label="LinkedIn" className="text-muted-foreground hover:text-primary transition-colors">
                     <Linkedin className="h-5 w-5" />
                     </a>
                 </div>
@@ -67,7 +47,7 @@ export function Footer() {
               <ul className="space-y-2">
                 {section.links.map((link) => (
                   <li key={link.label}>
-                    <a href={link.href} className="text-muted-foreground hover:text-primary hover:underline font-body text-sm">
+                    <a href={link.href} className="text-muted-foreground hover:text-primary hover:underline font-body text-sm transition-colors" target={link.href.startsWith('http') ? '_blank' : undefined} rel="noopener noreferrer">
                       {link.label}
                     </a>
                   </li>
