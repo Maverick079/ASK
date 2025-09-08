@@ -6,20 +6,20 @@ const teamMembers = [
   {
     name: "Ashwin",
     role: "Lead Designer",
-    avatar: "https://picsum.photos/100/100",
-    hint: "male portrait"
+    avatar: "https://picsum.photos/seed/ashwin/64/64",
+    hint: "portrait photo",
   },
   {
     name: "Sameer",
     role: "Creative Strategist",
-    avatar: "https://picsum.photos/100/100",
-    hint: "robot face"
+    avatar: "https://picsum.photos/seed/sameer/64/64",
+    hint: "portrait photo",
   },
   {
     name: "Shubhangi",
     role: "Creative Strategist",
-    avatar: "https://picsum.photos/100/100",
-    hint: "robot face"
+    avatar: "https://picsum.photos/seed/shubhangi/64/64",
+    hint: "portrait photo",
   },
 ];
 
