@@ -87,7 +87,7 @@ export function Footer() {
                 </div>
             </div>
             <Button asChild variant="secondary" className="font-headline mt-4 sm:mt-0">
-                <a href="#contact">Get a Quote</a>
+                <a href="https://wa.me/917400049015" target="_blank" rel="noopener noreferrer">Get a Quote</a>
             </Button>
         </div>
         <div className="mt-8 text-center text-xs text-muted-foreground/50 font-body">
