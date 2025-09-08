@@ -34,9 +34,9 @@ const getProjectData = () => {
       images: [
         { src: "https://live.staticflickr.com/65535/54773411050_4c8eb7049d_w.jpg", hint: "exhibition stand" },
         { src: "https://live.staticflickr.com/65535/54773299709_b3c481d2cd_w.jpg", hint: "booth design" },
-        { src: "https://live.staticflickr.com/65535/54771069732_308b098518_w.jpg", hint: "trade show" },
+        { src: "https://live.staticflickr.com/65535/54771069732_308b098518_w.jpg", hint: "event display" },
         { src: "https://live.staticflickr.com/65535/54773410960_9535f9da12_w.jpg", hint: "event display" },
-        { src: "https://live.staticflickr.com/65535/54772225927_faaf8899e1_w.jpg", hint: "interactive kiosk" },
+        { src: "https://live.staticflickr.com/65535/54772225927_faaf8899e1_w.jpg", hint: "event display" },
       ],
     },
     {
