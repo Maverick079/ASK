@@ -20,19 +20,6 @@ const values = [
   },
 ];
 
-const testimonials = [
-  {
-    title: "Our Differentiator",
-    quote: "We're often asked 'where did that idea come from?' The truth is that all our ideas come from the client. However unusual or inspired the end result, it all begins and ends with the client. It's a team-work we believe in which derives good briefs and great clients to enable great ideas and allow excellent results.",
-    author: "ASK Brands & Signs",
-  },
-  {
-    title: "Our Approch",
-    quote: "Simplicity and creativity, keeping them hand in hand is our motto. We keep a tab of best examples of contemporary graphic design and typography which helps us to keep our finger on the pulse of what's new, different and engaging in print & multimedia.",
-    author: "ASK Brands & Signs",
-  },
-];
-
 export function ValuePropositionSection() {
   return (
     <section className="py-16 md:py-24 bg-background">
@@ -44,7 +31,7 @@ export function ValuePropositionSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
+        <div className="grid md:grid-cols-3 gap-8">
           {values.map((value) => (
             <div key={value.title} className="text-center p-6 bg-card rounded-lg shadow-sm transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-2">
               <div className="inline-block p-4 bg-primary/10 rounded-full mb-4">
@@ -53,26 +40,6 @@ export function ValuePropositionSection() {
               <h3 className="text-xl font-semibold font-headline mb-2">{value.title}</h3>
               <p className="text-muted-foreground font-body">{value.description}</p>
             </div>
-          ))}
-        </div>
-
-        <div className="grid lg:grid-cols-2 gap-8">
-          {testimonials.map((testimonial) => (
-            <Card key={testimonial.title} className="transition-all duration-300 ease-in-out hover:shadow-xl hover:-translate-y-2">
-              <CardTitle className="p-6 italic text-center w-full">
-                {testimonial.title}
-              </CardTitle>
-              <CardContent className="p-6">
-                <blockquote className="text-lg font-body mb-4 italic text-foreground/80">
-                  “{testimonial.quote}”
-                </blockquote>
-                <div className="flex items-center gap-4">
-                  <div>
-                    <p className="font-semibold font-headline">- {testimonial.author}</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
           ))}
         </div>
       </div>

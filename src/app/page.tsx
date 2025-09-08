@@ -6,6 +6,7 @@ import { ValuePropositionSection } from '@/components/value-proposition';
 import { ProjectGallery } from '@/components/project-gallery';
 import { ContactCTA } from '@/components/contact-cta';
 import { Footer } from '@/components/footer';
+import { TestimonialsSection } from '@/components/testimonials-section';
 
 const getProjectData = () => {
   const projects = [
@@ -108,6 +109,7 @@ export default function Home() {
       <main className="flex-grow">
         <HeroSection />
         <ValuePropositionSection />
+        <TestimonialsSection />
         <ProjectGallery projects={projects} />
         <AboutUsSection />
         <ContactCTA />
