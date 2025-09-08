@@ -1,4 +1,3 @@
-
 "use client";
 
 import 'lightgallery/css/lightgallery.css';

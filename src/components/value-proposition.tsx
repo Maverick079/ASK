@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardTitle } from "@/components/ui/card";
 import { Palette, Cog, HardHat } from "lucide-react";
 
