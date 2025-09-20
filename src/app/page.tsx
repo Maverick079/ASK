@@ -19,10 +19,10 @@ const getProjectData = () => {
       category: "Exhibition",
       images: [
         { src: "https://ik.imagekit.io/askbrandsandsigns/Picture1.png?updatedAt=1758352842573", hint: "exhibition stand" },
-        { src: "https://live.staticflickr.com/65535/54773229778_191e24091b_w.jpg", hint: "booth design" },
-        { src: "https://live.staticflickr.com/65535/54773291894_88b0598218_w.jpg", hint: "trade show" },
-        { src: "https://live.staticflickr.com/65535/54772219197_70641506bf_w.jpg", hint: "event display" },
-        { src: "https://live.staticflickr.com/65535/54773292929_96fa592500_w.jpg", hint: "interactive kiosk" },
+        { src: "https://ik.imagekit.io/askbrandsandsigns/Picture2.png?updatedAt=1758353315921", hint: "booth design" },
+        { src: "https://ik.imagekit.io/askbrandsandsigns/Picture3.png?updatedAt=1758353312785", hint: "trade show" },
+        { src: "https://ik.imagekit.io/askbrandsandsigns/Picture4.png?updatedAt=1758353312994", hint: "event display" },
+        { src: "https://ik.imagekit.io/askbrandsandsigns/Picture6.png?updatedAt=1758353313716", hint: "interactive kiosk" },
       ],
     },
     {
