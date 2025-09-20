@@ -14,11 +14,11 @@ const getProjectData = () => {
     {
       title: "Exhibition Stands",
       description: "Creative and impactful exhibition stands that draw a crowd.",
-      thumbnail: "https://live.staticflickr.com/65535/54773324410_804f054972_w.jpg",
+      thumbnail: "https://ik.imagekit.io/askbrandsandsigns/Picture1.png?updatedAt=1758352842573",
       hint: "exhibition stand",
       category: "Exhibition",
       images: [
-        { src: "https://live.staticflickr.com/65535/54773324410_804f054972_w.jpg", hint: "exhibition stand" },
+        { src: "https://ik.imagekit.io/askbrandsandsigns/Picture1.png?updatedAt=1758352842573", hint: "exhibition stand" },
         { src: "https://live.staticflickr.com/65535/54773229778_191e24091b_w.jpg", hint: "booth design" },
         { src: "https://live.staticflickr.com/65535/54773291894_88b0598218_w.jpg", hint: "trade show" },
         { src: "https://live.staticflickr.com/65535/54772219197_70641506bf_w.jpg", hint: "event display" },
