@@ -31,11 +31,12 @@ export function FeedbackButton() {
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild>
         <Button
-          size="icon"
-          className="fixed bottom-8 left-8 z-50 rounded-full"
+          size="lg"
+          className="fixed bottom-8 left-8 z-50 rounded-full shadow-lg animate-pulse"
           aria-label="Provide feedback"
         >
-          <MessageSquarePlus className="h-5 w-5" />
+          <MessageSquarePlus className="h-5 w-5 mr-2" />
+          Feedback
         </Button>
       </SheetTrigger>
       <SheetContent side="left">
