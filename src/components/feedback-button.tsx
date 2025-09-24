@@ -32,7 +32,7 @@ export function FeedbackButton() {
       <SheetTrigger asChild>
         <Button
           size="lg"
-          className="fixed bottom-8 left-8 z-50 rounded-full shadow-lg animate-pulse"
+          className="fixed bottom-8 left-8 z-50 rounded-full shadow-lg"
           aria-label="Provide feedback"
         >
           <MessageSquarePlus className="h-5 w-5 mr-2" />
