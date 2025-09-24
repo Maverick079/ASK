@@ -8,6 +8,7 @@ import { ContactCTA } from '@/components/contact-cta';
 import { Footer } from '@/components/footer';
 import { TestimonialsSection } from '@/components/testimonials-section';
 import { ScrollToTopButton } from '@/components/scroll-to-top-button';
+import { FeedbackButton } from '@/components/feedback-button';
 
 const getProjectData = () => {
   const projects = [
@@ -117,6 +118,7 @@ export default function Home() {
       </main>
       <Footer />
       <ScrollToTopButton />
+      <FeedbackButton />
     </div>
   );
 }
