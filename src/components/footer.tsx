@@ -16,6 +16,7 @@ const footerLinks = [
     links: [
       { label: "WhatsApp", href: "https://wa.me/917400049015" },
       { label: "Email", href: "mailto:askbas22@gmail.com" },
+      { label: "Feedback", href: "/feedback"},
     ],
   },
 ];
@@ -49,7 +50,7 @@ export function Footer() {
               <ul className="space-y-2">
                 {section.links.map((link) => (
                   <li key={link.label}>
-                    <a href={link.href} className="text-muted-foreground hover:text-primary hover:underline font-body text-sm transition-colors" target={link.href.startsWith('http') ? '_blank' : undefined} rel="noopener noreferrer">
+                    <a href={link.href} className="text-muted-foreground hover:text-primary hover:underline font-body text-sm transition-colors" target={link.href.startsWith('http') || link.href.startsWith('/feedback') ? '_blank' : undefined} rel="noopener noreferrer">
                       {link.label}
                     </a>
                   </li>

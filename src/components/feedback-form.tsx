@@ -41,7 +41,13 @@ export function FeedbackForm({ onFeedbackSubmit }: { onFeedbackSubmit: () => voi
   });
 
   function onSubmit(data: FeedbackFormValues) {
-    console.log("Feedback submitted:", data);
+    try {
+      const existingFeedback = JSON.parse(localStorage.getItem("feedback") || "[]");
+      const newFeedback = [...existingFeedback, { ...data, date: new Date().toISOString() }];
+      localStorage.setItem("feedback", JSON.stringify(newFeedback));
+    } catch (error) {
+      console.error("Could not save feedback to localStorage", error);
+    }
     onFeedbackSubmit();
   }
 
