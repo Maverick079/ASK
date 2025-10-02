@@ -14,7 +14,7 @@ const getProjectData = () => {
   const projects = [
     {
       title: "Exhibition Stands",
-      description: "Creative and impactful exhibition stands that draw a crowd.",
+      description: "We provide end-to-end exhibition stand solutions, including custom design, fabrication, and on-site installation to ensure your brand stands out.",
       thumbnail: "https://ik.imagekit.io/askbrandsandsigns/Picture1.png?updatedAt=1758352842573",
       hint: "exhibition stand",
       category: "Exhibition",
@@ -28,7 +28,7 @@ const getProjectData = () => {
     },
     {
       title: "Event Management",
-      description: "Seamless execution of corporate and promotional events.",
+      description: "Our event management services cover everything from planning and coordination to execution, ensuring a seamless and memorable experience for any corporate or promotional event.",
       thumbnail: "https://ik.imagekit.io/askbrandsandsigns/events/E%20(1).png?updatedAt=1758376185994",
       hint: "corporate event",
       category: "Events",
@@ -42,7 +42,7 @@ const getProjectData = () => {
     },
     {
       title: "Indoor Branding",
-      description: "Transforming interior spaces with compelling brand identities.",
+      description: "We transform your interior spaces with wall graphics, reception signs, and directional signage that creates an immersive brand environment.",
       thumbnail: "https://ik.imagekit.io/askbrandsandsigns/events/indoor_branding/I%20(1).png?updatedAt=1758377482742",
       hint: "office interior",
       category: "Branding",
@@ -56,7 +56,7 @@ const getProjectData = () => {
     },
     {
       title: "Outdoor Branding",
-      description: "High-impact outdoor signage and branding solutions.",
+      description: "Our outdoor solutions include building signs, storefront branding, and large-format banners designed for maximum visibility and durability.",
       thumbnail: "https://ik.imagekit.io/askbrandsandsigns/events/indoor_branding/outdoor_branding/O%20(1).png?updatedAt=1758377963229",
       hint: "building signage",
       category: "Branding",
@@ -70,7 +70,7 @@ const getProjectData = () => {
     },
     {
       title: "Product Development",
-      description: "From concept to creation, bringing innovative products to life.",
+      description: "We guide your product from concept to reality with services in prototyping, 3D modeling, and packaging design to prepare it for the market.",
       thumbnail: "https://ik.imagekit.io/askbrandsandsigns/events/indoor_branding/outdoor_branding/product_development/PD%20(1).png?updatedAt=1758378068928",
       hint: "product prototype",
       category: "Development",
@@ -84,7 +84,7 @@ const getProjectData = () => {
     },
     {
       title: "Signage & Nameplates",
-      description: "Custom signage and nameplates with precision and quality.",
+      description: "We create custom-made signs, illuminated displays, and engraved nameplates using high-quality materials for a professional and lasting finish.",
       thumbnail: "https://ik.imagekit.io/askbrandsandsigns/events/indoor_branding/outdoor_branding/product_development/signage_and_nameplate/SN%20(1).png?updatedAt=1758378177579",
       hint: "metal sign",
       category: "Signage",
@@ -122,3 +122,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
