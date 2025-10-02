@@ -16,7 +16,6 @@ const footerLinks = [
     links: [
       { label: "WhatsApp", href: "https://wa.me/917400049015" },
       { label: "Email", href: "mailto:askbas22@gmail.com" },
-      { label: "Feedback", href: "/feedback"},
     ],
   },
 ];
