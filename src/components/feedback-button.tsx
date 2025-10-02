@@ -52,24 +52,6 @@ export function FeedbackButton() {
         });
     };
 
-    const clearAllFeedback = () => {
-      try {
-        localStorage.removeItem("feedback");
-        setFeedbackList([]);
-        toast({
-          title: "Feedback Cleared",
-          description: "All feedback has been removed.",
-        });
-      } catch (error) {
-        console.error("Could not clear feedback from localStorage", error);
-        toast({
-          variant: "destructive",
-          title: "Error",
-          description: "Could not clear feedback.",
-        });
-      }
-    };
-
   return (
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild>
@@ -96,11 +78,6 @@ export function FeedbackButton() {
         <div className="flex-grow overflow-y-auto pr-2">
             <div className="flex justify-between items-center mb-4">
                 <h3 className="text-lg font-semibold">Submitted Feedback</h3>
-                {feedbackList.length > 0 && (
-                    <Button variant="destructive" size="sm" onClick={clearAllFeedback}>
-                        <Trash2 className="mr-2 h-4 w-4" /> Clear
-                    </Button>
-                )}
             </div>
             {feedbackList.length > 0 ? (
             <div className="space-y-4">
